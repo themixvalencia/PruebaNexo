@@ -1,0 +1,47 @@
+<mat-sidenav-container class="app-sidenav-container">
+  <mat-sidenav class="app-sidenav" #sidenav [opened]="!pantallaSmall()"  [mode]="pantallaSmall() ? 'over' : 'side' ">
+    <mat-toolbar  color="primary">
+      MENU
+    </mat-toolbar>
+
+    <mat-nav-list>
+    
+         <a mat-list-item [routerLink]="['/dashboard']">
+          <h3 matLine>Servicios</h3>
+        </a>
+      
+
+      
+        <a mat-list-item [routerLink]="['/playas']">
+          <h3 matLine>Domotica</h3>
+        </a>
+
+
+        <a mat-list-item [routerLink]="['/crud']">
+          <h3 matLine>CRUD </h3>
+        </a>
+
+        <a mat-list-item [routerLink]="['/nuevo']">
+          <h3 matLine>Agregar al crud</h3>
+        </a>
+     
+    </mat-nav-list>
+
+
+  </mat-sidenav>
+
+  <div class="app-sidenav-content">
+
+    
+   <app-toolbar (disparador)="sidenav.toggle()" class="fijar"></app-toolbar>      
+
+   <router-outlet></router-outlet>
+  
+  </div>
+
+
+
+
+</mat-sidenav-container>
+
+

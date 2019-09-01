@@ -1,0 +1,33 @@
+main{
+  width: 100%;
+  margin-top: 2rem;
+ 
+}
+
+.example-card {
+    margin: auto;
+    display: block;
+    max-width: 400px;
+    
+    
+  }
+  
+  .example-header-image {
+    background-image: url('https://cdn.pixabay.com/photo/2016/04/03/17/48/monitoring-1305045_960_720.jpg');
+    background-size: cover;
+  }
+
+  .example-header-image2 {
+    background-image: url('https://cdn.pixabay.com/photo/2015/12/04/14/05/code-1076533_960_720.jpg');
+    background-size: cover;
+  }
+
+  .example-header-image3 {
+    background-image: url('https://cdn.pixabay.com/photo/2016/03/04/12/20/server-1235959_960_720.jpg');
+    background-size: cover;
+  }
+
+  .example-header-image4 {
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/01/19/56/board-1429589_960_720.jpg');
+    background-size: cover;
+  }

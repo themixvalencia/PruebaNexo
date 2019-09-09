@@ -13,13 +13,13 @@ export class CrudComponent implements OnInit {
   constructor(private service:ServiceService,private router:Router) { }
   notas: Nota [];
 
-  ngOnInit() {
+  ngOnInit() {/*
     this.service.getPersonas().subscribe(data=>{
       this.notas=data;
     });
-
+*/
   }
-
+/*
   Delete(nota: Nota){
     this.service.deletePersona(nota).subscribe(data=>{
       this.notas=this.notas.filter(p => p!==nota);
@@ -34,7 +34,7 @@ export class CrudComponent implements OnInit {
     
   }
 
-
+*/
 
 
 }

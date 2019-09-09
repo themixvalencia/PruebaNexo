@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from '../../Service/service.service';
 import { Nota } from '../../Modelos/nota';
+import { DetalleFactura } from '../../Modelos/detalleFactura';
 
 @Component({
   selector: 'app-add',
@@ -16,19 +17,32 @@ export class AddComponent implements OnInit {
   }
  
   nota:Nota= new Nota() ;
+  detalleFactura: DetalleFactura= new DetalleFactura();
 
-  Registrar(nombre: String,titulo: String, tareas: String){
-    this.nota.nombre=nombre;
-    this.nota.contenido=tareas;
-    this.nota.titulo= titulo;
-
-
+  Registrar(idFactura: number,fechaFactura: String, idCliente: number, idCamarero: number,idMesa: number, plato: String, importe: number, cocinero: number){
+    this.nota.idFactura=idFactura;
+    this.nota.fechaFactura=fechaFactura;
+    this.nota.idCliente= idCliente;
+    this.nota.idCamarero=idCamarero;
+    this.nota.idMesa=idMesa;
+    this.detalleFactura.plato=plato;
+    this.detalleFactura.importe=importe;
+    this.detalleFactura.idCocinero=cocinero;
+    this.detalleFactura.idFactura=idFactura;
+   
     this.servicio.postPersonas(this.nota).subscribe(data=>{
-      alert("se ha agregado con exito");
-      
+     
+    });
+
+    this.servicio.putPersonas(this.detalleFactura).subscribe(data=>{
+      alert("se ha modificado la fatura");  
       this.router.navigate(['crud']);
  
     });
+
+    
+
+
   }
 
 

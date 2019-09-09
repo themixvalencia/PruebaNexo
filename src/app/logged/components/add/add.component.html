@@ -1,32 +1,59 @@
-<div class="container col-md-6" >
-    <div class="card">
-        <div class="card-header">
-            <h3 style="color: black">Registro</h3>
+<br>
+<br>
+<div class="container col-md-6">
+  <div class="card">
+    <div class="card-header">
+      <h3 style="color: black">Guardar Factura y Platos</h3>
+    </div>
+    <div class="card-body">
+      <form action="">
+
+        <div class="form-group">
+          <label for="">Id manual Factura</label>
+          <input #idFactura type="text" class="form-control">
         </div>
-            <div class="card-body">
-              <form action="" >
-  
-                <div class="form-group">
-                <label for="" >Nombre</label>
-                <input #nombre type="text" class="form-control">
-                </div>
-  
-                <div class="form-group">
-                <label for="" >Titulo</label>
-                <input #titulo type="text" class="form-control">
-                </div>
-  
-                <div class="form-group">
-                <label for="" >Tareas</label>
-                <input #tareas type="text" class="form-control">
-                </div>
-                
-                <button (click)="Registrar(nombre.value,titulo.value,tareas.value)" class="btn btn-danger">Registrar</button>
-  
-              </form>
-          
+
+        <div class="form-group">
+          <label for="">fecha</label>
+          <input #fecha type="text" class="form-control">
         </div>
+
+        <div class="form-group">
+          <label for="">ID_cliente</label>
+          <input #cliente type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">ID_camarero</label>
+          <input #camarero type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">ID_mesa</label>
+          <input #mesa type="text" class="form-control">
+        </div>
+
+
+        <div class="form-group">
+          <label for="">plato</label>
+          <input #plato type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="">importe</label>
+          <input #importe type="text" class="form-control">
+        </div>
+
+        
+        <div class="form-group">
+          <label for="">ID_cocinero</label>
+          <input #cocinero type="text" class="form-control">
+        </div>
+
+        <button (click)="Registrar(idFactura.value,fecha.value,cliente.value,camarero.value, mesa.value, plato.value, importe.value, cocinero.value)" class="btn btn-danger">Guardar factura</button>
+
+      </form>
+
     </div>
   </div>
- 
-
+</div>

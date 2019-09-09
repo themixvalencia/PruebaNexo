@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { PlayasComponent } from './components/playas/playas.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { AddComponent } from './components/add/add.component';
@@ -15,10 +14,7 @@ const routes: Routes = [
   path: '',
   component: SidenavComponent,
   children:[
-    {
-      path: 'playas',
-      component: PlayasComponent
-    },
+  
     {
       path: 'dashboard',
       component: DashboardComponent

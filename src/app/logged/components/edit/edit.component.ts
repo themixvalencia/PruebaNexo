@@ -15,9 +15,9 @@ export class EditComponent implements OnInit {
   constructor(private routert: Router, private service: ServiceService) { }
 
   ngOnInit() {
-    this.Editar();
+   /* this.Editar();*/
   }
-
+/*
   Editar(){
     let id=localStorage.getItem("id");
     this.service.getPersonasId(+id).subscribe(data=>{
@@ -35,6 +35,6 @@ export class EditComponent implements OnInit {
     })
 
   }
-
+*/
 
 }

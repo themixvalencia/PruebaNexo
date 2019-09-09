@@ -1,8 +1,9 @@
 export class Nota{
-    id:number;
-    contenido:String;
-    nombre:String;
-    titulo:String;
+    idFactura:number;
+    fechaFactura:String;
+    idCliente:number;
+    idCamarero:number;
+    idMesa: number;
    
   
   }
